@@ -41,6 +41,14 @@ if (isset($_SESSION['username'])) {
 			$_SESSION['counter']++;
 
 		}
+		else {
+			$content = "Hello ".$_SESSION['username']." you have visited this ".
+			"page ".$_SESSION['counter']." times before. Click <a href=".
+			"'login.php?reset=true'>here</a> to logout.<br>Click <a href=".
+			"'content2.php'>here</a> for Content2.php.";
+			$_SESSION['counter']++;
+		}
+
 	}
 	else {
 		$content = "Hello ".$_SESSION['username']." you have visited this ".
